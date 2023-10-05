@@ -48,7 +48,7 @@ body {
 @media (min-width: 1400px) {
 
     .container {
-        max-width: 1320px;
+        max-width: 1110px;
     }
 }
 
@@ -214,7 +214,7 @@ a:hover {
     width: auto;
     max-height: 99px;
     object-fit: contain;
-    object-position: 0 0;
+    object-position: 50% 50%;
 }
 
 .header__area-controls {
@@ -294,6 +294,8 @@ a:hover {
     }
 }
 
+/* section-hero */
+
 .section-hero {
     position: relative;
     min-height: 435px;
@@ -317,4 +319,45 @@ a:hover {
     flex-direction: column;
     padding: 0 15px;
     text-align: center;
+}
+
+/* section-categories */
+
+.section-categories {
+    padding: 37px 0 31px;
+}
+
+.scrollable-container {
+    position: relative;
+    overflow: hidden;
+    touch-action: pan-y;
+}
+
+.scrollable-track {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    white-space: nowrap;
+    gap: 7px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.scrollable-track::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollable-item {
+    scroll-snap-align: start;
+    position: relative;
+    flex-shrink: 0;
+    max-width: 365px;
+}
+
+.card-category .card-img {
+    max-width: 100%;
+    height: auto;
 }
