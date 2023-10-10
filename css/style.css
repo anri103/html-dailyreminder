@@ -603,17 +603,17 @@ a:focus {
     align-items: center;
     justify-content: center;
     gap: 11px;
-    height: 55px;
 }
 
 .footer-socials .socials-nav a {
     display: inline-flex;
+    flex-shrink: 0;
     align-items: center;
     justify-content: center;
     text-align: center;
     max-width: 42px;
     width: 100%;
-    height: 100%;
+    height: 55px;
     color: #000;
     border: 1px solid #000;
     background: #fff;
