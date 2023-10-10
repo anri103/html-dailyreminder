@@ -17,7 +17,7 @@ dropdowns.forEach(function (dropdown) {
     });
 });
 
-// =================== Слайдер
+// =================== Слайдеры
 
 const heroSwiper = new Swiper('.heroSwiper', {
     loop: true,
@@ -27,5 +27,24 @@ const heroSwiper = new Swiper('.heroSwiper', {
     },
     pagination: {
         el: '.swiper-pagination'
+    },
+});
+
+const categorySwiper = new Swiper('.categorySwiper', {
+    slidesPerView: 1.35,
+    loop: false,
+    spaceBetween: 7,
+    grabCursor: true,
+    breakpoints: {
+        768: {
+            slidesPerView: 3,
+        },
+        992: {
+            slidesPerView: 3,
+        },
+        1200: {
+            slidesPerView: 3,
+            grabCursor: false,
+        },
     },
 });
