@@ -73,6 +73,8 @@ body {
     height: 100% !important;
 }
 
+/* Animations */
+
 .hover-opacity {
     opacity: 1;
     transition: opacity 0.3s ease;
@@ -80,6 +82,20 @@ body {
 
 .hover-opacity:hover {
     opacity: .65;
+}
+
+.fade {
+    transition: opacity 0.15s linear;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fade {
+        transition: none;
+    }
+}
+
+.fade:not(.show) {
+    opacity: 0;
 }
 
 /* Links */
@@ -159,6 +175,7 @@ button:hover {
     outline: none;
     background: #000;
     text-align: center;
+    cursor: pointer;
 }
 
 .btn-primary:hover {
@@ -292,17 +309,14 @@ button:hover {
     padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);
 }
 
-.offcanvas-header .btn-close {
-    padding: calc(var(--bs-offcanvas-padding-y) * 0.5) calc(var(--bs-offcanvas-padding-x) * 0.5);
-    margin-top: calc(-0.5 * var(--bs-offcanvas-padding-y));
-    margin-right: calc(-0.5 * var(--bs-offcanvas-padding-x));
-    margin-bottom: calc(-0.5 * var(--bs-offcanvas-padding-y));
-}
-
 .offcanvas-body {
     flex-grow: 1;
     padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);
     overflow-y: auto;
+}
+
+.offcanvas-footer {
+    padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);
 }
 
 /* Поиск */
@@ -313,6 +327,56 @@ button:hover {
     --bs-offcanvas-padding-x: 30px;
     --bs-offcanvas-padding-y: 30px;
     bottom: auto;
+}
+
+/* Мобильное меню */
+/* offcanvas-menu */
+
+.offcanvas-menu {
+    --bs-offcanvas-width: 300px;
+    --bs-offcanvas-padding-x: 1.5rem;
+}
+
+.mobile-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mobile-nav>li>a {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.offcanvas-footer .widget-text {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -1.05px;
+    margin-bottom: 26px;
+}
+
+.offcanvas-phone {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -0.75px;
+    margin-bottom: 7px;
 }
 
 /* Modals */
@@ -448,6 +512,8 @@ button:hover {
 /* modal-subscribe */
 
 .modal-subscribe .header__control-btn {
+    width: 26px;
+    height: 26px;
     position: absolute;
     bottom: calc(100% + 5px);
     right: 0;
@@ -457,6 +523,7 @@ button:hover {
 
 .modal-subscribe .modal-body {
     text-align: center;
+    padding: 10px 10px 45px;
 }
 
 .modal-subscribe .modal-img-wrap {
@@ -498,12 +565,6 @@ button:hover {
     margin-bottom: 31px;
 }
 
-.modal-subscribe .modal-form-wrap .modal-note {
-    font-size: 12px;
-    letter-spacing: -0.24px;
-    margin-bottom: 0;
-}
-
 .subscribe-form {
     margin-bottom: 15px;
 }
@@ -520,6 +581,82 @@ button:hover {
     line-height: 136.336%;
     letter-spacing: -0.3px;
     text-transform: lowercase;
+}
+
+.modal-subscribe .modal-form-wrap .modal-note {
+    font-size: 12px;
+    letter-spacing: -0.24px;
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+
+    .modal-subscribe .header__control-btn {
+        bottom: calc(100% + 0px);
+        right: auto;
+        left: calc(100% + 0px);
+    }
+
+    .modal-subscribe .modal-img-wrap {
+        margin-bottom: 16px;
+    }
+
+    .modal-subscribe .modal-text-wrap {
+        padding: 0 60px;
+    }
+
+    .modal-subscribe .modal-title {
+        max-width: 346px;
+        margin: 0 auto 5px;
+    }
+
+    .modal-subscribe .modal-subtitle {
+        margin-bottom: 14px;
+    }
+
+    .modal-subscribe .modal-note {
+        margin-bottom: 38px;
+    }
+}
+
+/* modal-thanks */
+
+.modal-thanks .header__control-btn {
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    bottom: calc(100% + 5px);
+    right: 0;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.modal-thanks .modal-body {
+    text-align: center;
+    padding: 10px;
+}
+
+.modal-thanks .modal-img-wrap {
+    height: 348px;
+}
+
+.modal-thanks .modal-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+
+    .modal-thanks .header__control-btn {
+        bottom: calc(100% + 0px);
+        right: auto;
+        left: calc(100% + 0px);
+    }
+
+    .modal-thanks .modal-img-wrap {
+        height: 470px;
+    }
 }
 
 
@@ -617,7 +754,6 @@ button:hover {
     transition: all 0.3s ease;
 }
 
-.navbar-nav>li>a:focus,
 .navbar-nav>li>a:hover {
     color: #1b2738;
 }
@@ -959,7 +1095,7 @@ button:hover {
     margin-bottom: 25px;
 }
 
-.footer-widget .widget-text p:last-child {
+.widget-text p:last-child {
     margin-bottom: 0;
 }
 
@@ -973,14 +1109,17 @@ button:hover {
 }
 
 .footer-socials .socials-nav {
+    justify-content: center;
+}
+
+.socials-nav {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
     gap: 11px;
 }
 
-.footer-socials .socials-nav a {
+.socials-nav a {
     display: inline-flex;
     flex-shrink: 0;
     align-items: center;
@@ -994,7 +1133,7 @@ button:hover {
     background: #fff;
 }
 
-.footer-socials .socials-nav a:hover {
+.socials-nav a:hover {
     color: #fff;
     background: #000;
 }
@@ -1359,18 +1498,13 @@ button:hover {
 
 .section-products .section-header {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     margin-bottom: 17px;
 }
 
-.section-products .section-title-wrap {
-    position: relative;
-    display: flex;
-    max-width: 283px;
-}
-
 .section-products .section-title {
-    width: 100%;
+    position: relative;
+    max-width: 283px;
 }
 
 .section-products .section-subtitle {
@@ -1546,10 +1680,11 @@ button:hover {
     }
 
     .section-products .section-header {
+        justify-content: center;
         margin-bottom: 25px;
     }
 
-    .section-products .section-title-wrap {
+    .section-products .section-title {
         max-width: 370px;
     }
 
@@ -1595,8 +1730,8 @@ button:hover {
         margin-bottom: 39px;
     }
 
-    .section-products .section-title-wrap {
-        max-width: 100%;
+    .section-products .section-title {
+        max-width: 564px;
     }
 
     .section-products .section-subtitle {
