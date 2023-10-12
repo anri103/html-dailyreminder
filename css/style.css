@@ -1663,7 +1663,7 @@ button:hover {
 
 .card-product .card-price .old-price {
     color: rgba(0, 0, 0, 0.5);
-    text-decoration: line-through 1px rgba(0, 0, 0, 0.25);
+    text-decoration: line-through;
 }
 
 .section-products .section-footer {
@@ -2011,3 +2011,49 @@ button:hover {
         height: 435px;
     }
 }
+
+/* Виджет «Заголовок о Нас» */
+/* section-philosophy */
+
+.section-philosophy {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 1200px) {}
+
+/* Виджет «Наша философия» */
+/* section-philosophy */
+
+.section-philosophy {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 1200px) {}
+
+/* Виджет «О бренде» */
+/* section-about-brand */
+
+.section-about-brand {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 1200px) {}
+
+/* Виджет «ДНК бренда» */
+/* section-dna-brand */
+
+.section-dna-brand {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 1200px) {}
+
+/* Виджет «Цитата» */
+/* section-quote */
+
+.section-quote {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 1200px) {}
+

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О бренде</title>
+
+    <!-- Стили с основного сайта -->
+    <link rel="stylesheet" href="css/core-css.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+
+    <!-- Мои стили -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Обертка как на основном сайте -->
+    <div class="page_layout page_layout-clear">
+
+        <!-- Поиск -->
+        <!-- offcanvas-search -->
+        <div class="offcanvas offcanvas-top offcanvas-search" id="offcanvas-search" tabindex="-1">
+            <div class="offcanvas-body">
+                <div class="container">
+                    <form class="search-form" action="#">
+                        <input type="text" class="form-control search-input" placeholder="Найти...">
+                        <div class="flex-shrink-0">
+                            <button type="button" class="header__control-btn" data-bs-dismiss="offcanvas">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13" viewBox="0 0 14 13" fill="none">
+                                    <path d="M7.21694 6.7556L12.87 11.9234L13.1824 11.6378L7.5294 6.46995L13.1123 1.01611L12.7998 0.730469L7.21694 6.18431L1.25143 0.730825L0.938965 1.01647L6.90447 6.46995L0.938965 11.9234L1.25143 12.2091L7.21694 6.7556Z" fill="black"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Мобильное меню -->
+        <!-- offcanvas-menu -->
+        <div class="offcanvas offcanvas-end offcanvas-menu" id="offcanvas-menu" tabindex="-1">
+            <div class="offcanvas-header">
+                <a class="header__logo" href="#">
+                    <img src="img/logo.svg" alt="Daily Reminder" title="Daily Reminder">
+                </a>
+                <button type="button" class="header__control-btn" data-bs-dismiss="offcanvas">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13" viewBox="0 0 14 13" fill="none">
+                        <path d="M7.21694 6.7556L12.87 11.9234L13.1824 11.6378L7.5294 6.46995L13.1123 1.01611L12.7998 0.730469L7.21694 6.18431L1.25143 0.730825L0.938965 1.01647L6.90447 6.46995L0.938965 11.9234L1.25143 12.2091L7.21694 6.7556Z" fill="black"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="mobile-nav">
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">О бренде</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Покупателю</a></li>
+                    <li><a href="#">Уход</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="#">Возврат</a></li>
+                </ul>
+            </div>
+            <div class="offcanvas-footer">
+                <div class="widget-text">
+                    <p>Одежда, созданная<br>
+                        как напоминание любить себя</p>
+                </div>
+                <div class="offcanvas-phone">
+                    <a href="tel:+79152951000">+7 915 295-10-00</a>
+                </div>
+                <div class="offcanvas-socials">
+                    <nav class="socials-nav">
+                        <a href="#" target="_blank" rel="nofollow">tg</a>
+                        <a href="#" target="_blank" rel="nofollow">wa</a>
+                        <a href="#" target="_blank" rel="nofollow">ins</a>
+                        <a href="#" target="_blank" rel="nofollow">vk</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- ШАПКА -->
+        <header>
+            <div class="hero-area">
+
+                <!-- Мобильное меню 📱 -->
+                <!-- header-menu-mobile -->
+                <div class="header-menu-mobile">
+                    <div class="container">
+                        <div class="header-grid">
+                            <div class="header-mobile__area-logo">
+                                <a class="header__logo hover-opacity" href="#">
+                                    <img src="img/logo.svg" alt="Daily Reminder" title="Daily Reminder">
+                                </a>
+                            </div>
+                            <div class="header-mobile__area-controls">
+                                <button type="button" class="header__control-btn header__search js-search" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-search" aria-controls="offcanvas-search">
+                                    <span class="icon icon-search"></span>
+                                </button>
+                                <a class="header__control-btn header__favorite" href="#">
+                                    <span class="icon icon-favorites"></span>
+                                    <span class="header__control-bage">1</span>
+                                </a>
+                                <a class="header__control-btn header__cart" href="#">
+                                    <span class="icon icon-cart"></span>
+                                    <span class="header__control-bage">3</span>
+                                </a>
+                            </div>
+                            <div class="header-mobile__toggle-menu">
+                                <button type="button" class="header__control-btn js-side-panel" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-menu" aria-controls="offcanvas-menu">
+                                    <span class="icon icon-bars"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Десктопное меню 🖥️ -->
+                <!-- header-menu-desktop -->
+                <div class="header-menu-desktop">
+                    <div class="container">
+                        <div class="header-grid">
+                            <div class="header-desktop__area-collections">
+                                <ul class="navbar-nav">
+                                    <li><a href="#">Каталог</a></li>
+                                    <li><a href="#">О бренде</a></li>
+                                    <li><a href="#">Контакты</a></li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-link" href="#">Покупателю</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Уход</a></li>
+                                            <li><a href="#">Доставка и оплата</a></li>
+                                            <li><a href="#">Возврат</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="header-desktop__area-logo">
+                                <a class="header__logo hover-opacity" href="#">
+                                    <img src="img/logo.svg" alt="Daily Reminder" title="Daily Reminder">
+                                </a>
+                            </div>
+                            <div class="header-desktop__area-controls">
+                                <a class="header__phone-link" href="tel:+79152951000">+7 915 295-10-00</a>
+                                <a class="header__control-btn header__cabinet" href="#">
+                                    <span class="icon icon-user"></span>
+                                </a>
+                                <button type="button" class="header__control-btn header__search js-search" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-search" aria-controls="offcanvas-search">
+                                    <span class="icon icon-search"></span>
+                                </button>
+                                <a class="header__control-btn header__favorite" href="#">
+                                    <span class="icon icon-favorites"></span>
+                                    <span class="header__control-bage">1</span>
+                                </a>
+                                <a class="header__control-btn header__cart" href="#">
+                                    <span class="icon icon-cart"></span>
+                                    <span class="header__control-bage">3</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+        <!-- КОНТЕЙНЕР ВИДЖЕТОВ -->
+        <main>
+
+            <!-- Виджет «Заголовок о Нас» -->
+            <!-- section-philosophy -->
+            <section class="section section-philosophy">
+                <div class="container">
+
+                </div>
+            </section>
+
+            <!-- Виджет «Наша философия» -->
+            <!-- section-philosophy -->
+            <section class="section section-philosophy">
+                <div class="container">
+
+                </div>
+            </section>
+
+            <!-- Виджет «О бренде» -->
+            <!-- section-about-brand -->
+            <section class="section section-about-brand">
+                <div class="container">
+
+                </div>
+            </section>
+
+            <!-- Виджет «ДНК бренда» -->
+            <!-- section-dna-brand -->
+            <section class="section section-dna-brand">
+                <div class="container">
+
+                </div>
+            </section>
+
+            <!-- Виджет «Цитата» -->
+            <!-- section-quote -->
+            <section class="section section-quote">
+                <div class="container">
+
+                </div>
+            </section>
+
+        </main>
+
+        <!-- ПОДВАЛ -->
+        <footer>
+            <div class="footer-area">
+                <div class="container">
+                    <div class="footer-top">
+                        <div class="logo-footer">
+                            <img class="img-fluid" src="img/logo-footer.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="footer-middle">
+                        <div class="d-row">
+                            <div class="col-1">
+                                <div class="footer-widget">
+                                    <p class="widget-title">Каталог</p>
+                                    <nav class="footer-nav">
+                                        <a href="#">Каталог</a>
+                                        <a href="#">Каталог</a>
+                                        <a href="#">Каталог</a>
+                                        <a href="#">Каталог</a>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="footer-widget">
+                                    <p class="widget-title">Контакты</p>
+                                    <div class="widget-text">
+                                        <p>Индивидуальный предприниматель<br>
+                                            Иваньков Лидия Элизабет<br>
+                                            ИНН: 770373352658<br>
+                                            ОГРНИП: 316774600305628</p>
+                                    </div>
+                                    <div class="footer-phone">
+                                        <a href="tel:+79152951000">+7 915 295-10-00</a>
+                                    </div>
+                                    <div class="footer-socials">
+                                        <nav class="socials-nav">
+                                            <a href="#" target="_blank" rel="nofollow">tg</a>
+                                            <a href="#" target="_blank" rel="nofollow">wa</a>
+                                            <a href="#" target="_blank" rel="nofollow">ins</a>
+                                            <a href="#" target="_blank" rel="nofollow">vk</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="footer-widget">
+                                    <p class="widget-title">Инфо</p>
+                                    <nav class="footer-nav">
+                                        <a href="#">О бренде</a>
+                                        <a href="#">Доставка и оплата</a>
+                                        <a href="#">Возврат товара</a>
+                                        <a href="#">Уход за одеждой</a>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <div class="mail-link-wrap">
+                            <a class="mail-link hover-opacity" href="mailto:Info@dailyreminder.ru">
+                                <img class="img-fluid" src="img/mail-footer.svg" alt="Info@dailyreminder.ru">
+                            </a>
+                        </div>
+                        <div class="d-grid">
+                            <div class="col-1">
+                                <a class="footer-link" href="#">Договор оферты</a>
+                            </div>
+                            <div class="col-2">
+                                <a class="footer-link" href="#">Политика конфиденциальности</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- end page_layout -->
+
+    <!-- Мои скрипты -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
