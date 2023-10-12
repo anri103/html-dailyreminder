@@ -2017,43 +2017,87 @@ button:hover {
 
 .section-philosophy {}
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
 
-@media (min-width: 1200px) {}
+    .section-philosophy {}
+}
+
+@media (min-width: 1200px) {
+
+    .section-philosophy {}
+}
 
 /* Виджет «Наша философия» */
 /* section-philosophy */
 
 .section-philosophy {}
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
 
-@media (min-width: 1200px) {}
+    .section-philosophy {}
+}
+
+@media (min-width: 1200px) {
+
+    .section-philosophy {}
+}
 
 /* Виджет «О бренде» */
 /* section-about-brand */
 
 .section-about-brand {}
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
 
-@media (min-width: 1200px) {}
+    .section-about-brand {}
+}
+
+@media (min-width: 1200px) {
+
+    .section-about-brand {}
+}
 
 /* Виджет «ДНК бренда» */
 /* section-dna-brand */
 
 .section-dna-brand {}
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
 
-@media (min-width: 1200px) {}
+    .section-dna-brand {}
+}
+
+@media (min-width: 1200px) {
+
+    .section-dna-brand {}
+}
 
 /* Виджет «Цитата» */
 /* section-quote */
 
 .section-quote {}
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
 
-@media (min-width: 1200px) {}
+    .section-quote {}
+}
 
+@media (min-width: 1200px) {
+
+    .section-quote {}
+}
+
+/* Виджет «Уход подробнее» */
+/* section-care-more */
+
+.section-care-more {}
+
+@media (min-width: 768px) {
+
+    .section-care-more {}
+}
+
+@media (min-width: 1200px) {
+
+    .section-care-more {}
+}
