@@ -1769,32 +1769,32 @@ button:hover {
 }
 
 /* Виджет «Памятка по уходу» */
-/* section-cta */
+/* section-care */
 
-.section-cta .section-wrap {
+.section-care .section-wrap {
     position: relative;
     overflow: hidden;
     padding: 30px 30px;
     background: #FAFAFA;
 }
 
-.section-cta .section-content {
+.section-care .section-content {
     position: relative;
     max-width: 100%;
     margin-bottom: 32px;
     z-index: 1;
 }
 
-.section-cta .section-title {
+.section-care .section-title {
     margin-bottom: 22px;
 }
 
-.section-cta .section-img-wrap {
+.section-care .section-img-wrap {
     position: relative;
     transform: translateY(30px);
 }
 
-.section-cta .section-img {
+.section-care .section-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1802,20 +1802,20 @@ button:hover {
 
 @media (min-width: 768px) {
 
-    .section-cta .section-wrap {
+    .section-care .section-wrap {
         padding: 17px 60px 52px;
     }
 
-    .section-cta .section-content {
+    .section-care .section-content {
         max-width: 305px;
         margin-bottom: 0;
     }
 
-    .section-cta .section-title {
+    .section-care .section-title {
         margin-bottom: 16px;
     }
 
-    .section-cta .section-img-wrap {
+    .section-care .section-img-wrap {
         position: absolute;
         top: auto;
         right: 0;
@@ -1827,19 +1827,19 @@ button:hover {
 
 @media (min-width: 1200px) {
 
-    .section-cta .section-wrap {
+    .section-care .section-wrap {
         padding: 24px 84px 72px;
     }
 
-    .section-cta .section-content {
+    .section-care .section-content {
         max-width: 426px;
     }
 
-    .section-cta .section-title {
+    .section-care .section-title {
         margin-bottom: 24px;
     }
 
-    .section-cta .section-img-wrap {
+    .section-care .section-img-wrap {
         max-width: 504px;
     }
 }
