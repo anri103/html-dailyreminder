@@ -678,6 +678,10 @@ button:hover {
     background: transparent;
 }
 
+.hero-area.statik .header-menu-mobile {
+    position: static;
+}
+
 .header-menu-mobile .header-grid {
     display: flex;
     align-items: center;
@@ -712,6 +716,10 @@ button:hover {
     z-index: 100;
     background: rgba(255, 255, 255, 0.40);
     backdrop-filter: blur(22px);
+}
+
+.hero-area.statik .header-menu-desktop {
+    position: static;
 }
 
 .header-menu-desktop .header-grid {
@@ -2017,6 +2025,27 @@ button:hover {
 
 .section-philosophy {}
 
+.section-philosophy .section-title {
+    position: relative;
+}
+
+
+
+.section-philosophy .section-title::first-letter {
+    color: transparent !important;
+}
+
+.section-philosophy .section-title::before {
+    content: '';
+    display: inline-block;
+    width: 70px;
+    height: 43px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='103' height='90' viewBox='0 0 103 90' fill='none'%3E%3Cpath d='M38.1642 89.1163C35.792 89.1163 34.0478 88.6977 32.8617 87.8605C31.6756 87.0232 30.6988 85.6976 29.7918 83.9533C29.3732 83.2556 29.0243 82.4184 28.8848 81.4416C28.7452 80.5346 28.6755 78.9997 28.6755 76.8368C28.6755 73.4878 28.7452 71.1157 29.0243 69.79L29.5127 67.5574C25.2567 67.6969 21.0008 67.8365 16.7448 67.9062C13.6051 67.9062 11.0934 67.7667 9.27941 67.4178C7.46539 67.1388 5.79091 66.6504 4.39551 65.8829C1.67448 64.9061 0.34885 62.534 0.34885 58.8361C0.34885 55.7663 1.81402 52.3475 4.74436 48.5102C7.6747 44.7426 11.5818 40.975 16.396 37.2074C26.6521 29.1839 37.8851 23.4627 49.746 19.137L54.5601 17.3928L56.5137 14.6717C61.2581 8.04358 64.7466 3.64807 67.1885 1.4852C67.956 0.787504 68.9328 0.438646 69.9793 0.438646C71.584 0.438646 72.9097 0.996807 73.7469 2.04336C74.6539 3.08991 75.1423 4.13646 75.1423 5.25278C75.1423 7.20634 73.8167 8.18312 71.2352 8.25289L69.1421 8.11335C68.863 8.04358 68.3048 7.97381 67.6071 7.83427L64.8861 10.9739C62.6535 13.5554 61.3278 15.0903 61.3278 15.6485C61.3278 15.788 61.4674 15.8578 61.6767 15.8578C61.9558 15.8578 62.4441 15.788 63.0721 15.5787C63.7 15.3694 65.0256 15.2299 67.1187 15.1601C69.1421 15.0206 71.3049 14.9508 73.5376 14.9508C76.0493 14.9508 78.0029 14.9508 79.3285 15.0206C83.4449 15.1601 87.4218 16.2764 91.1894 18.2998C92.6546 18.9975 94.05 20.044 95.5151 21.5092C97.5385 23.5325 98.9339 25.6256 99.7013 27.7187C100.05 28.6257 100.19 30.37 100.19 32.9515C100.19 34.8353 100.05 36.3702 99.8409 37.4168C99.6316 38.5331 99.2827 39.7192 98.7943 40.975C97.8175 43.4867 96.7012 45.7194 95.4454 47.7427C94.1197 49.766 92.515 52.0684 90.5615 54.6499H94.7477C99.7013 54.6499 102.213 55.6267 102.283 57.65C102.283 58.2082 102.143 58.6966 101.794 59.1152C101.515 59.6036 101.027 59.8129 100.329 59.8129C99.8409 59.8129 99.3525 59.7431 98.8641 59.4641C98.4455 59.2548 97.8175 59.1152 97.1198 58.9059C96.4221 58.7664 95.4454 58.5571 94.2593 58.6268L87.352 58.8361L82.2588 63.3712C68.0257 75.9996 55.7462 84.372 45.0714 88.1395C42.6992 88.7675 40.3968 89.1163 38.1642 89.1163ZM0.83724 59.185C0.83724 60.7897 1.81402 62.2549 3.83735 63.5107C6.69792 65.255 10.7446 66.162 16.1866 66.162C20.5822 66.162 24.1404 65.8131 27.001 65.5341L30.0011 65.255C32.4431 58.3478 34.9548 51.9289 37.7456 46.0682C40.4666 40.1378 44.3737 33.1608 49.5367 25.2768C51.0716 22.8348 51.8391 21.5092 51.8391 21.2999C51.8391 21.2301 51.7693 21.2301 51.7693 21.2301C51.4205 21.2301 50.1646 21.6487 48.0018 22.486C32.7221 28.556 20.3031 35.9516 10.7446 44.7426C4.39551 50.5335 1.11632 55.3476 0.83724 59.185ZM30.4895 78.4415C30.4895 83.9533 33.1408 86.6744 38.4433 86.6744C44.0946 86.6744 51.7693 83.4649 61.4674 77.1159C67.8164 72.9297 73.8167 68.2551 79.3285 63.0223C81.2123 61.2083 82.1891 60.1618 82.1891 59.8129C82.1891 59.6734 82.0495 59.6036 81.7704 59.6036C80.0262 59.6036 71.5143 60.7897 56.3742 63.1619C41.1643 65.4643 33.2105 66.7899 32.5128 67.069C32.2337 67.2783 31.9547 68.0458 31.6058 69.3714C31.257 70.697 30.9779 72.1622 30.7686 73.8367C30.5593 75.5112 30.4895 77.0461 30.4895 78.4415ZM33.2105 64.5573C33.2105 64.7666 33.3501 64.9061 33.5594 64.9061C34.2571 64.6271 35.3734 64.348 36.8386 64.2782C37.4665 64.2084 39.4898 63.7898 42.769 63.1619C64.7466 58.9757 79.6076 56.2547 87.352 54.9988C91.1196 50.3242 93.9104 46.3473 95.7942 42.9983C97.678 39.6494 98.585 36.3004 98.585 33.0212C98.585 28.2769 96.3524 24.4395 91.9569 21.579C87.4916 18.7184 81.6309 17.2532 74.3051 17.2532C71.5143 17.2532 68.5141 17.4625 65.3745 17.9509C62.1651 18.4393 60.1417 18.8579 59.2347 19.137C57.8393 19.9045 55.4671 22.8348 52.0484 28.0676C48.6297 33.3003 45.1412 39.161 41.7225 45.5101C38.234 51.9289 35.7222 57.2314 34.1175 61.4176C33.4896 63.0223 33.2105 64.0689 33.2105 64.5573Z' fill='black'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+  
+
 @media (min-width: 768px) {
 
     .section-philosophy {}
@@ -2090,14 +2119,151 @@ button:hover {
 /* Виджет «Уход подробнее» */
 /* section-care-more */
 
-.section-care-more {}
+.section-care-more {
+    padding: 30px 0 0;
+}
+
+.section-care-more .section-wrapper {
+    padding: 30px 0 0;
+    background-color: #fafafa;
+}
+
+.section-care-more .section-content {
+    max-width: 100%;
+}
+
+.section-care-more .section-title {
+    margin-bottom: 14px;
+}
+
+.section-care-more .section-text {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 151.336%;
+    letter-spacing: -1.4px;
+    margin-bottom: 25px;
+}
+
+.section-care-more .section-text p:last-child {
+    margin-bottom: 0;
+}
+
+.section-care-more .section-text-bg {
+    padding: 21px 30px;
+    background: #F2F2F2;
+}
+
+.section-care-more .section-text-bg__title {
+    max-width: 314px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 134.336%;
+    letter-spacing: -1px;
+}
+
+.section-care-more .section-text-bg__list {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 151.336%;
+    letter-spacing: -1.4px;
+}
+
+.section-care-more .mobile-img {
+    height: 392px;
+}
+
+.section-care-more .section-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 @media (min-width: 768px) {
 
-    .section-care-more {}
+    .section-care-more .section-wrapper {
+        padding: 30px 0;
+        background-image: url(../img/section-care-more-bg.png);
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .section-care-more .section-content {
+        max-width: 350px;
+    }
+
+    .section-care-more .section-text {
+        font-size: 14.319px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 151.336%;
+        letter-spacing: -1.002px;
+    }
+
+    .section-care-more .section-text-bg__title {
+        max-width: 224px;
+        font-size: 14.319px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 134.336%;
+        letter-spacing: -0.716px;
+    }
+
+    .section-care-more .section-text-bg__list {
+        font-size: 14.319px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 151.336%;
+        letter-spacing: -1.002px;
+    }
+
+    .section-care-more .section-text-bg {
+        padding: 10px 21px;
+    }
+
+    .section-care-more .mobile-img {
+        display: none;
+    }
 }
 
 @media (min-width: 1200px) {
 
     .section-care-more {}
+
+    /* .section-care-more .section-wrapper {
+        background-size: contain;
+    } */
+
+    .section-care-more .section-content {
+        max-width: 490px;
+    }
+
+    .section-care-more .section-text {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 151.336%;
+        letter-spacing: -1.4px;
+        margin-bottom: 25px;
+    }
+
+    .section-care-more .section-text-bg__title {
+        max-width: 314px;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 134.336%;
+        letter-spacing: -1px;
+    }
+    
+    .section-care-more .section-text-bg__list {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 151.336%;
+        letter-spacing: -1.4px;
+    }
 }

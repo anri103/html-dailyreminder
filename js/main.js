@@ -52,13 +52,17 @@ const categorySwiper = new Swiper('.categorySwiper', {
 
 // =================== Активация модального окна «Спасибо» вместо отправки формы, ТОЛЬКО для демонстрации
 
-document.getElementById("subscribeForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-    const ms = bootstrap.Modal.getInstance(document.getElementById('modal-subscribe'));
-    ms.hide();
-    const sf = new bootstrap.Modal(document.getElementById('modal-thanks'));
-    sf.show();
-});
+const subscribeForm = document.getElementById('subscribeForm');
+
+if (subscribeForm) {
+    subscribeForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const ms = bootstrap.Modal.getInstance(document.getElementById('modal-subscribe'));
+        ms.hide();
+        const sf = new bootstrap.Modal(document.getElementById('modal-thanks'));
+        sf.show();
+    });
+}
 
 
 /*!
