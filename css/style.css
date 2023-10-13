@@ -2448,7 +2448,7 @@ button:hover {
 /* section-quote */
 
 .section-quote {
-    overflow: hidden;
+    overflow-x: clip;
     text-align: center;
     padding: 34px 0 65px;
     margin-bottom: 137px;
