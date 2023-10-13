@@ -716,6 +716,7 @@ button:hover {
     z-index: 100;
     background: rgba(255, 255, 255, 0.40);
     backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
 }
 
 .hero-area.statik .header-menu-desktop {
@@ -1624,6 +1625,7 @@ button:hover {
     line-height: normal;
     letter-spacing: -0.45px;
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
