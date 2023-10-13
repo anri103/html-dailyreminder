@@ -2231,12 +2231,6 @@ button:hover {
 
 @media (min-width: 1200px) {
 
-    .section-care-more {}
-
-    /* .section-care-more .section-wrapper {
-        background-size: contain;
-    } */
-
     .section-care-more .section-content {
         max-width: 490px;
     }
