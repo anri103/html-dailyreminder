@@ -56,10 +56,14 @@
                     <li><a href="#">Каталог</a></li>
                     <li><a href="#">О бренде</a></li>
                     <li><a href="#">Контакты</a></li>
-                    <li><a href="#">Покупателю</a></li>
-                    <li><a href="#">Уход</a></li>
-                    <li><a href="#">Доставка и оплата</a></li>
-                    <li><a href="#">Возврат</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-link" href="#">Покупателю</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Уход</a></li>
+                            <li><a href="#">Доставка и оплата</a></li>
+                            <li><a href="#">Возврат</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <div class="offcanvas-footer">
@@ -83,7 +87,10 @@
 
         <!-- ШАПКА -->
         <header>
-            <div class="hero-area">
+            <!----------------------------------- ВНИМАНИЕ!!! ------------------------------------>
+            <!--- Только на главной странице у "hero-area" есть еще один класс "pos-absolute" ---->
+            <!------ На остальных страницах дополнительный класс "pos-absolute" ОТСУТСТВУЕТ ------>
+            <div class="hero-area pos-absolute">
 
                 <!-- Мобильное меню 📱 -->
                 <!-- header-menu-mobile -->
@@ -273,7 +280,7 @@
                     <div class="swiper categorySwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="card-category">
+                                <a class="card-category" href="#">
                                     <div class="card-img-wrap">
                                         <picture class="card-picture">
                                             <!-- Изображение -->
@@ -290,14 +297,14 @@
                                                 <p class="card-title">Повседневная одежда</p>
                                             </div>
                                             <div class="card-link">
-                                                <a href="#">смотреть</a>
+                                                <span>смотреть</span>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                             <div class="swiper-slide">
-                                <div class="card-category">
+                                <a class="card-category" href="#">
                                     <div class="card-img-wrap">
                                         <picture class="card-picture">
                                             <!-- Изображение -->
@@ -314,14 +321,14 @@
                                                 <p class="card-title">sale</p>
                                             </div>
                                             <div class="card-link">
-                                                <a href="#">смотреть</a>
+                                                <span>смотреть</span>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                             <div class="swiper-slide">
-                                <div class="card-category">
+                                <a class="card-category" href="#">
                                     <div class="card-img-wrap">
                                         <picture class="card-picture">
                                             <!-- Изображение -->
@@ -338,11 +345,11 @@
                                                 <p class="card-title">Одежда для спорта</p>
                                             </div>
                                             <div class="card-link">
-                                                <a href="#">смотреть</a>
+                                                <span>смотреть</span>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>

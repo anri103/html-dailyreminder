@@ -178,7 +178,8 @@ button:hover {
     cursor: pointer;
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus {
     color: #eaeaea;
     background: #202020;
 }
@@ -346,7 +347,8 @@ button:hover {
     gap: 20px;
 }
 
-.mobile-nav>li>a {
+.mobile-nav>li>a,
+.mobile-nav .dropdown-menu a {
     display: block;
     width: 100%;
     white-space: nowrap;
@@ -359,6 +361,26 @@ button:hover {
     letter-spacing: -1px;
     text-transform: uppercase;
     transition: all 0.3s ease;
+}
+
+.mobile-nav .dropdown-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    display: none;
+    text-align: left;
+    background-color: #fff;
+    border: none;
+    border-radius: 0;
+    transition: all 0.3s ease-in;
+}
+
+.mobile-nav .dropdown-menu.show {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .offcanvas-footer .widget-text {
@@ -565,6 +587,12 @@ button:hover {
     margin-bottom: 31px;
 }
 
+.modal-subscribe .modal-note a {
+    color: rgba(0, 0, 0, 0.30);
+    padding-bottom: 1px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .subscribe-form {
     margin-bottom: 15px;
 }
@@ -670,16 +698,15 @@ button:hover {
 /* header-menu-mobile */
 
 .header-menu-mobile {
+    display: block;
+}
+
+.hero-area.pos-absolute .header-menu-mobile {
     position: absolute;
     top: 0;
-    display: block;
     width: 100%;
     z-index: 100;
     background: transparent;
-}
-
-.hero-area.statik .header-menu-mobile {
-    position: static;
 }
 
 .header-menu-mobile .header-grid {
@@ -709,18 +736,17 @@ button:hover {
 /* header-menu-desktop */
 
 .header-menu-desktop {
+    display: none;
+}
+
+.hero-area.pos-absolute .header-menu-desktop {
     position: absolute;
     top: 0;
-    display: none;
     width: 100%;
     z-index: 100;
     background: rgba(255, 255, 255, 0.40);
     backdrop-filter: blur(22px);
     -webkit-backdrop-filter: blur(22px);
-}
-
-.hero-area.statik .header-menu-desktop {
-    position: static;
 }
 
 .header-menu-desktop .header-grid {
@@ -771,7 +797,7 @@ button:hover {
     position: relative;
 }
 
-.dropdown-menu {
+.navbar-nav .dropdown-menu {
     list-style: none;
     margin: 0;
     position: absolute;
@@ -797,13 +823,13 @@ button:hover {
     transition: all 0.3s ease-in;
 }
 
-.dropdown-menu.show {
+.navbar-nav .dropdown-menu.show {
     top: 100%;
     opacity: 1;
     visibility: visible;
 }
 
-.dropdown-menu a {
+.navbar-nav .dropdown-menu a {
     display: block;
     width: 100%;
     text-decoration: none;
@@ -817,8 +843,8 @@ button:hover {
     transition: all 0.3s ease;
 }
 
-.dropdown-menu a:focus,
-.dropdown-menu a:hover {
+.navbar-nav .dropdown-menu a:focus,
+.navbar-nav .dropdown-menu a:hover {
     color: #1b2738;
 }
 
@@ -896,7 +922,7 @@ button:hover {
     line-height: 14px;
     text-align: center;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: #C1C1C1;
 }
 
 @media (min-width: 768px) {
@@ -908,6 +934,10 @@ button:hover {
     .header__logo {
         max-width: 143px;
     }
+
+    .header__control-bage {
+        background-color: #fff;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -917,7 +947,7 @@ button:hover {
         letter-spacing: -0.6px;
     }
 
-    .dropdown-menu a {
+    .navbar-nav .dropdown-menu a {
         font-size: 12px;
         letter-spacing: -0.6px;
     }
@@ -960,7 +990,8 @@ button:hover {
 .heroSwiper .slide-content {
     position: absolute;
     top: 50%;
-    transform: translateY(-100%);
+    left: 50%;
+    transform: translate(-50%, -100%);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -968,45 +999,14 @@ button:hover {
     text-align: center;
 }
 
-.heroSwiper .slide-title.test {
-    max-width: 550px;
-    margin: 0 auto;
-}
-
-.heroSwiper .slide-title.test p {
-    font-size: 45px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: -3.15px;
-    text-transform: uppercase;
-}
-
-.heroSwiper .slide-title.test p .first-letter {
-    display: none;
-}
-
-.first-letter-custom {
-    --letter-O: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='74' height='65' viewBox='0 0 74 65' fill='none'%3E%3Cpath d='M27.2044 64.1464C25.506 64.1464 24.2571 63.8467 23.4079 63.2473C22.5587 62.6478 21.8594 61.6987 21.21 60.4499C20.9103 59.9503 20.6605 59.3509 20.5606 58.6516C20.4607 58.0022 20.4107 56.9032 20.4107 55.3546C20.4107 52.9569 20.4607 51.2585 20.6605 50.3093L21.0102 48.7108C17.963 48.8107 14.9159 48.9106 11.8687 48.9606C9.62079 48.9606 7.82247 48.8607 6.52368 48.6109C5.22489 48.4111 4.02601 48.0614 3.02695 47.5119C1.07876 46.8126 0.12965 45.1142 0.12965 42.4667C0.12965 40.2687 1.17867 37.821 3.27671 35.0736C5.37475 32.3761 8.17214 29.6786 11.6189 26.9811C18.9621 21.2365 27.0046 17.1403 35.4966 14.0432L38.9434 12.7943L40.3421 10.8462C43.7389 6.1006 46.2366 2.95353 47.985 1.40498C48.5345 0.905447 49.2338 0.655674 49.9831 0.655674C51.132 0.655674 52.0812 1.0553 52.6806 1.8046C53.33 2.55391 53.6797 3.30321 53.6797 4.10246C53.6797 5.50115 52.7306 6.2005 50.8823 6.25046L49.3837 6.15055C49.1839 6.1006 48.7842 6.05064 48.2847 5.95074L46.3365 8.19864C44.738 10.0469 43.7889 11.1459 43.7889 11.5455C43.7889 11.6454 43.8888 11.6954 44.0387 11.6954C44.2385 11.6954 44.5882 11.6454 45.0377 11.4956C45.4873 11.3457 46.4364 11.2458 47.935 11.1958C49.3837 11.0959 50.9322 11.046 52.5307 11.046C54.3291 11.046 55.7278 11.046 56.6769 11.0959C59.6241 11.1958 62.4715 11.9951 65.1689 13.4437C66.218 13.9433 67.217 14.6926 68.2661 15.7416C69.7147 17.1902 70.7138 18.6888 71.2633 20.1874C71.513 20.8368 71.6129 22.0857 71.6129 23.934C71.6129 25.2827 71.513 26.3817 71.3632 27.131C71.2133 27.9302 70.9635 28.7794 70.6139 29.6786C69.9145 31.4769 69.1153 33.0754 68.2161 34.5241C67.267 35.9727 66.1181 37.6212 64.7194 39.4695H67.7166C71.2633 39.4695 73.0616 40.1688 73.1115 41.6174C73.1115 42.0171 73.0116 42.3667 72.7619 42.6665C72.562 43.0161 72.2124 43.166 71.7128 43.166C71.3632 43.166 71.0135 43.116 70.6638 42.9162C70.3641 42.7664 69.9145 42.6665 69.415 42.5166C68.9155 42.4167 68.2161 42.2668 67.3669 42.3168L62.4215 42.4667L58.7749 45.7136C48.5844 54.7552 39.7926 60.7496 32.1498 63.4471C30.4514 63.8967 28.8029 64.1464 27.2044 64.1464ZM0.479323 42.7164C0.479323 43.8654 1.17867 44.9144 2.62732 45.8135C4.67541 47.0624 7.5727 47.7118 11.4691 47.7118C14.6161 47.7118 17.1638 47.462 19.2118 47.2622L21.3598 47.0624C23.1082 42.117 24.9065 37.5213 26.9047 33.3252C28.8528 29.0791 31.6502 24.0838 35.3468 18.4391C36.4458 16.6907 36.9952 15.7416 36.9952 15.5917C36.9952 15.5418 36.9453 15.5418 36.9453 15.5418C36.6955 15.5418 35.7964 15.8415 34.2478 16.4409C23.308 20.7869 14.4163 26.0819 7.5727 32.3761C3.02695 36.5222 0.679137 39.969 0.479323 42.7164ZM21.7095 56.5036C21.7095 60.4499 23.6077 62.3981 27.4042 62.3981C31.4504 62.3981 36.9453 60.1002 43.8888 55.5544C48.4346 52.5572 52.7306 49.2104 56.6769 45.4639C58.0256 44.1651 58.725 43.4158 58.725 43.166C58.725 43.0661 58.6251 43.0161 58.4252 43.0161C57.1764 43.0161 51.0821 43.8654 40.2422 45.5638C29.3524 47.2122 23.6577 48.1613 23.1582 48.3612C22.9583 48.511 22.7585 49.0605 22.5088 50.0096C22.259 50.9587 22.0592 52.0078 21.9093 53.2066C21.7595 54.4055 21.7095 55.5045 21.7095 56.5036ZM23.6577 46.5628C23.6577 46.7127 23.7576 46.8126 23.9075 46.8126C24.407 46.6128 25.2062 46.413 26.2553 46.363C26.7048 46.3131 28.1535 46.0133 30.5013 45.5638C46.2366 42.5666 56.8767 40.6184 62.4215 39.7192C65.119 36.3723 67.1171 33.525 68.4659 31.1272C69.8146 28.7295 70.464 26.3317 70.464 23.9839C70.464 20.5871 68.8655 17.8396 65.7184 15.7916C62.5214 13.7435 58.3253 12.6944 53.0802 12.6944C51.0821 12.6944 48.9341 12.8443 46.6862 13.194C44.3883 13.5436 42.9397 13.8434 42.2903 14.0432C41.2912 14.5927 39.5928 16.6907 37.1451 20.4372C34.6974 24.1837 32.1997 28.3798 29.752 32.9256C27.2543 37.5213 25.456 41.3177 24.3071 44.3149C23.8575 45.4639 23.6577 46.2132 23.6577 46.5628Z' fill='black'/%3E%3C/svg%3E");
-
-    display: inline-block;
-    width: 101px;
-    height: 88px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-image: var(--letter-O);
-    transform: translate(33px, 8px);
-}
-
 .heroSwiper .slide-subtitle {
-    font-size: 20px;
+    font-size: 13.736px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
-    letter-spacing: -1px;
+    letter-spacing: -0.687px;
     text-transform: lowercase;
-    margin-top: 32px;
+    margin-top: 22px;
 }
 
 .heroSwiper .slide-subtitle a {
@@ -1039,7 +1039,14 @@ button:hover {
     }
 
     .heroSwiper .slide-content {
-        transform: translateY(-50%);
+        transform: translate(-50%, -25%);
+        max-width: 409px;
+    }
+
+    .heroSwiper .slide-subtitle {
+        font-size: 14.319px;
+        letter-spacing: -0.716px;
+        margin-top: 21px;
     }
 }
 
@@ -1047,6 +1054,29 @@ button:hover {
 
     .heroSwiper {
         height: 650px;
+    }
+
+    .heroSwiper .slide-content {
+        transform: translate(-50%, -27%);
+        max-width: 550px;
+    }
+
+    .heroSwiper .slide-subtitle {
+        font-size: 20px;
+        letter-spacing: -1px;
+        margin-top: 32px;
+    }
+}
+
+@media (min-width: 1600px) {
+
+    .heroSwiper {
+        height: 650px;
+    }
+
+    .heroSwiper .slide-content {
+        transform: translate(-50%, -27%);
+        max-width: 550px;
     }
 }
 
@@ -1301,16 +1331,19 @@ button:hover {
 
 .card-category {
     position: relative;
+    display: block;
 }
 
 .card-category .card-img-wrap {
     height: 280px;
+    overflow: hidden;
 }
 
 .card-category .card-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all 0.3s ease;
 }
 
 .card-category .card-body {
@@ -1334,7 +1367,11 @@ button:hover {
 
 .card-category .card-title {
     font-size: 16.906px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
     letter-spacing: -0.845px;
+    text-transform: lowercase;
 }
 
 .card-category .card-link {
@@ -1346,7 +1383,7 @@ button:hover {
     text-transform: lowercase;
 }
 
-.card-category .card-link a {
+.card-category .card-link span {
     padding-bottom: 1px;
     border-bottom: 1px solid #000;
 }
@@ -1390,6 +1427,10 @@ button:hover {
         height: 313px;
     }
 
+    .card-category:hover .card-img {
+        transform: scale(1.05);
+    }
+
     .card-category .card-body {
         padding: 20px 30px 30px;
     }
@@ -1425,10 +1466,12 @@ button:hover {
     position: relative;
     max-width: 440px;
     padding: 21px 0 42px;
+    text-align: center;
     z-index: 1;
 }
 
 .section-sale .section-title {
+    text-align: left;
     margin-bottom: 21px;
 }
 
@@ -1442,6 +1485,7 @@ button:hover {
     line-height: normal;
     letter-spacing: -1px;
     text-transform: lowercase;
+    text-align: left;
 }
 
 .section-sale .section-text::before {
@@ -1478,6 +1522,7 @@ button:hover {
     .section-sale .section-content {
         max-width: 315px;
         padding: 10px 0 30px;
+        text-align: left;
     }
 
     .section-sale .section-title {
@@ -1743,7 +1788,7 @@ button:hover {
     }
 
     .card-product .card-heading {
-        max-width: 97px;
+        max-width: 120px;
     }
 
     .card-product .card-title {
@@ -1791,7 +1836,7 @@ button:hover {
     }
 
     .card-product .card-heading {
-        max-width: 136px;
+        max-width: 168px;
     }
 
     .card-product .card-title {
@@ -1823,10 +1868,12 @@ button:hover {
     position: relative;
     max-width: 100%;
     margin-bottom: 32px;
+    text-align: center;
     z-index: 1;
 }
 
 .section-care .section-title {
+    text-align: left;
     margin-bottom: 22px;
 }
 
@@ -1848,6 +1895,7 @@ button:hover {
     }
 
     .section-care .section-content {
+        text-align: left;
         max-width: 305px;
         margin-bottom: 0;
     }
@@ -1894,8 +1942,8 @@ button:hover {
 
 .section-contacts .section-title {
     max-width: 214px;
-    margin-bottom: 11px;
     transform: translateX(-18px);
+    margin-bottom: 11px;
 }
 
 .section-contacts .d-row {
@@ -2066,11 +2114,10 @@ button:hover {
 
 .section-about-header .section-title {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-}
-
-.section-about-header .section-title svg {
-    margin: 0 auto;
 }
 
 .section-about-header .section-subtitle {
@@ -2149,11 +2196,8 @@ button:hover {
 }
 
 .section-philosophy .section-title {
-    margin-bottom: 3px;
-}
-
-.section-philosophy .section-title svg {
     max-width: 275px;
+    margin-bottom: 3px;
 }
 
 .section-philosophy .section-text {
@@ -2183,11 +2227,8 @@ button:hover {
     }
 
     .section-philosophy .section-title {
-        margin-bottom: 2px;
-    }
-
-    .section-philosophy .section-title svg {
         max-width: 197px;
+        margin-bottom: 2px;
     }
     
     .section-philosophy .section-text {
@@ -2212,11 +2253,8 @@ button:hover {
     }
 
     .section-philosophy .section-title {
-        margin-bottom: 3px;
-    }
-
-    .section-philosophy .section-title svg {
         max-width: 275px;
+        margin-bottom: 3px;
     }
     
     .section-philosophy .section-text {
@@ -2237,11 +2275,8 @@ button:hover {
 }
 
 .section-about-brand .section-title {
-    margin-bottom: 3px;
-}
-
-.section-about-brand .section-title svg {
     max-width: 170px;
+    margin-bottom: 3px;
 }
 
 .section-about-brand .section-text {
@@ -2267,10 +2302,8 @@ button:hover {
     }
 
     .section-about-brand .section-title {
-        margin-bottom: 2px;
-    }
-    .section-about-brand .section-title svg {
         max-width: 122px;
+        margin-bottom: 2px;
     }
 
     .section-about-brand .section-text {
@@ -2290,11 +2323,8 @@ button:hover {
     }
 
     .section-about-brand .section-title {
-        margin-bottom: 3px;
-    }
-
-    .section-about-brand .section-title svg {
         max-width: 170px;
+        margin-bottom: 3px;
     }
 
     .section-about-brand .section-text {
@@ -2330,11 +2360,8 @@ button:hover {
 }
 
 .section-dna-brand .section-title {
-    margin-bottom: 6px;
-}
-
-.section-dna-brand .section-title svg {
     max-width: 188px;
+    margin-bottom: 6px;
 }
 
 .section-dna-brand .section-text {
@@ -2365,11 +2392,8 @@ button:hover {
     }
 
     .section-dna-brand .section-title {
-        margin-bottom: 2px;
-    }
-
-    .section-dna-brand .section-title svg {
         max-width: 134px;
+        margin-bottom: 2px;
     }
 
     .section-dna-brand .section-text {
@@ -2393,11 +2417,8 @@ button:hover {
     }
 
     .section-dna-brand .section-title {
-        margin-bottom: 3px;
-    }
-
-    .section-dna-brand .section-title svg {
         max-width: 188px;
+        margin-bottom: 3px;
     }
 
     .section-dna-brand .section-text {
