@@ -2220,12 +2220,21 @@ button:hover {
 }
 
 .section-philosophy .section-img-wrap {
+    position: relative;
     text-align: center;
 }
 
 .section-philosophy .section-img {
     max-width: 100%;
     height: auto;
+}
+
+.section-philosophy .section-img-mask {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .section-philosophy .section-title {
