@@ -1947,10 +1947,10 @@ button:hover {
     .section-care .section-img-wrap {
         position: absolute;
         top: auto;
-        right: 0;
+        right: 20px;
         bottom: 0;
-        transform: translateY(0);
-        max-width: 400px;
+        transform: none;
+        max-width: 370px;
     }
 }
 
@@ -1969,6 +1969,7 @@ button:hover {
     }
 
     .section-care .section-img-wrap {
+        right: 60px;
         max-width: 504px;
     }
 }
