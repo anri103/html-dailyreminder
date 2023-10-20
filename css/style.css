@@ -850,7 +850,7 @@ button:hover {
     transition: all 0.3s ease-in;
 }
 
-.navbar-nav .dropdown-menu.show {
+.navbar-nav .dropdown:hover .dropdown-menu {
     top: 100%;
     opacity: 1;
     visibility: visible;
