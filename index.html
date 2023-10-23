@@ -752,6 +752,8 @@
                         </div>
                         <div class="section-img-wrap">
                             <picture class="section-picture">
+                                <!-- Изображение для мобильных экранов -->
+                                <source media="(max-width: 767px)" srcset="img/img-section-care-more.png">
                                 <!-- Изображение -->
                                 <source srcset="img/img-section-care.png">
                                 <!-- Изображение для ретина-экранов с плотностью пикселей 2x -->
@@ -830,12 +832,12 @@
 
                                         function init() {
                                             var myMap = new ymaps.Map("yamap", {
-                                                center: [55.751979, 37.617499],
-                                                zoom: 15
+                                                center: [55.756548, 37.595402],
+                                                zoom: 16
                                             }),
 
                                             // Создаем метку с помощью вспомогательного класса.
-                                            myPlacemark1 = new ymaps.Placemark([55.751979, 37.617499], {
+                                            myPlacemark1 = new ymaps.Placemark([55.756548, 37.595402], {
                                                 // Свойства.
                                                 // Содержимое хинта.
                                                 hintContent: 'Надпись, которая всплаывет при наведении на метку'
@@ -847,7 +849,7 @@
                                                 iconImageSize: [57, 78],
                                                 // Смещение левого верхнего угла иконки относительно
                                                 // её "ножки" (точки привязки).
-                                                iconImageOffset: [-57, -78],
+                                                iconImageOffset: [-28, -78],
                                             })
 
                                             // Добавляем все метки на карту.
@@ -855,9 +857,9 @@
 
                                             myMap.controls.remove('mapTools');
 
-                                            myMap.behaviors.disable('scrollZoom'); // — это отключает зум колёсиком мышки, всё ок.
-                                            myMap.behaviors.disable('multiTouch'); // — это отключает зум щипком, не очень нужно.
-                                            // myMap.behaviors.disable('drag'); — это отключает прокрутку карты, но есть одно "но": сама страница также не прокручивается.
+                                            myMap.behaviors.disable('scrollZoom'); // — это отключает зум колёсиком мышки.
+                                            // myMap.behaviors.disable('multiTouch');  — это отключает зум щипком.
+                                            // myMap.behaviors.disable('drag'); — это отключает прокрутку карты, но сама страница также не прокручивается.
 
                                         }
                                     </script>
