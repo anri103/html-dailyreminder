@@ -857,6 +857,8 @@
 
                                             myMap.controls.remove('mapTools');
 
+                                            myMap.controls.add('zoomControl', { left: 5, top: 5 })
+
                                             myMap.behaviors.disable('scrollZoom'); // — это отключает зум колёсиком мышки.
                                             // myMap.behaviors.disable('multiTouch');  — это отключает зум щипком.
                                             // myMap.behaviors.disable('drag'); — это отключает прокрутку карты, но сама страница также не прокручивается.
