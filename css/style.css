@@ -1694,7 +1694,7 @@ button:hover {
     display: inline-block;
 }
 
-.favorites_btn {
+.favorites_btn_safe {
     position: relative;
     min-width: 2rem;
     height: 2rem;
