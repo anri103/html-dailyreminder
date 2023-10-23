@@ -825,24 +825,23 @@
                             <div class="contacts-widget">
                                 <div class="section-img-wrap">
                                     <!-- Карта Яндекс -->
-                                    <script src="//api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU" type="text/javascript"></script>
+                                    <script src="//api-maps.yandex.ru/2.1/?load=package.standard,package.geoObjects&lang=ru-RU" type="text/javascript"></script>
                                     <div id="yamap" style="width:100%; height:100%;"></div>
                                     <script>
                                         ymaps.ready(init);
 
-                                        function init() {
+                                        function init(){
+
                                             var myMap = new ymaps.Map("yamap", {
                                                 center: [55.756548, 37.595402],
-                                                zoom: 16
-                                            }),
+                                                zoom: 16,
+                                                controls: ['zoomControl']
+                                            });
 
                                             // Создаем метку с помощью вспомогательного класса.
-                                            myPlacemark1 = new ymaps.Placemark([55.756548, 37.595402], {
-                                                // Свойства.
-                                                // Содержимое хинта.
-                                                hintContent: 'Надпись, которая всплаывет при наведении на метку'
-                                            }, {
+                                            var myPlacemark1 = new ymaps.Placemark([55.756548, 37.595402], {}, {
                                                 // Опции
+                                                iconLayout: 'default#image',
                                                 // Своё изображение иконки метки.
                                                 iconImageHref: 'img/img-map-marker.svg',
                                                 // Размеры метки.
@@ -850,24 +849,25 @@
                                                 // Смещение левого верхнего угла иконки относительно
                                                 // её "ножки" (точки привязки).
                                                 iconImageOffset: [-28, -78],
-                                            })
+                                            });
 
                                             // Добавляем все метки на карту.
                                             myMap.geoObjects.add(myPlacemark1);
 
-                                            myMap.controls.remove('mapTools');
-
-                                            myMap.controls.add('zoomControl', { left: 5, top: 5 })
-
                                             myMap.behaviors.disable('scrollZoom'); // — это отключает зум колёсиком мышки.
                                             // myMap.behaviors.disable('multiTouch');  — это отключает зум щипком.
-                                            // myMap.behaviors.disable('drag'); — это отключает прокрутку карты, но сама страница также не прокручивается.
+                                            myMap.behaviors.disable('drag'); // — это отключает прокрутку карты, но сама страница также не прокручивается.
 
                                         }
                                     </script>
                                     <style>
-                                        .ymaps-layers-pane {
+                                        .ymaps-2-1-79-ground-pane {
                                             -webkit-filter: grayscale(100%);
+                                        }
+
+                                        .ymaps-2-1-79-map-copyrights-promo,
+                                        .ymaps-2-1-79-copyright {
+                                            display: none;
                                         }
                                     </style>
                                 </div>
